@@ -1,0 +1,5 @@
+if (process.env.NODE_ENV === 'development') {
+    module.exports = require('./dist/stellaMath.js');
+} else {
+    module.exports = require('./dist/stellaMath.min.js');
+}
