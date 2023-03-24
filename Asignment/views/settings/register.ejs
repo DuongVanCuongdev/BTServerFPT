@@ -1,0 +1,56 @@
+<%- include('../include/header.ejs') %>
+
+    <div class="d-flex justify-content-center" style="background-color: #fec7bc;">
+        <div class="bg-white rounded" style="width: 550px; margin: 100px; padding: 40px;">
+            <form>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h3>Đăng ký</h3>
+                </div>
+                <!-- Username -->
+                <div class="mb-3 row align-items-center">
+                    <label for="Email" class="col-3">Username</label>
+                    <input type="email" class="col-9 px-3 py-1" placeholder="Enter username">
+                </div>
+                <!-- Email -->
+                <div class="mb-3 row align-items-center">
+                    <label for="Email" class="col-3">Email</label>
+                    <input type="email" class="col-9 px-3 py-1" placeholder="Enter email">
+                </div>
+                <!-- Password -->
+                <div class="mb-3 row align-items-center">
+                    <label for="exampleInputPassword1" class="col-3">Password</label>
+                    <input type="password" class="col-9 px-3 py-1" placeholder="Enter password">
+                </div>
+                <!-- RePassword -->
+                <div class="mb-3 row align-items-center">
+                    <label for="exampleInputPassword1" class="col-3">RePassword</label>
+                    <input type="password" class="col-9 px-3 py-1" placeholder="Enter re-password">
+                </div>
+                <!-- Phone -->
+                <div class="mb-3 row align-items-center">
+                    <label for="exampleInputPassword1" class="col-3">Phone</label>
+                    <input type="password" class="col-9 px-3 py-1" placeholder="Enter phone-number">
+                </div>
+                <!-- Role -->
+                <div class="mb-3 row align-items-center">
+                    <label for="exampleInputPassword1 col" class="col-3">Role</label>
+                    <div class="col row">
+                        <div class="form-check col">
+                            <input type="radio" name="role" checked>
+                            <label class="form-check-label" for="flexRadioDefault1">User</label>
+                        </div>
+                        <div class="form-check col">
+                            <input type="radio" name="role">
+                            <label class="form-check-label" for="flexRadioDefault2">Adim</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit -->
+                <div class="row">
+                    <button type="submit" class="btn mt-2 col-12" style="background-color: #F68F7B; color: white;">Đăng ký</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include('../include/footer.ejs') %>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center my-5">Danh sách người dùng</h1>
+    <a href="/themNguoiDung">Thêm người dùng mới</a>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Ảnh</th>
+          <th>Họ và tên</th>
+          <th>Email</th>
+          <th>Số điện thoại</th>
+          <th>Tuỳ chọn</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each userss}}
+        <tr>
+          <td><img src="{{avatar}}" alt="{{name}}" width="50"></td>
+          <td>{{name}}</td>
+          <td>{{email}}</td>
+          <td>{{phone}}</td>
+          <td>
+            <a href="#" class="btn btn-primary btn-sm">Sửa</a>
+            <a href="#" class="btn btn-danger btn-sm">Xoá</a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+
+    <div class="">
+		<h1 class="text-center my-5">Danh sách sản phẩm</h1>
+        <a href="/themSanPham">Thêm sản phẩm mới</a>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Ảnh</th>
+					<th>Tên sản phẩm</th>
+                    <th>Loại sản phẩm</th>
+					<th>Thông tin sản phẩm</th>
+					<th>Giá</th>
+					<th>Tuỳ chọn</th>
+				</tr>
+			</thead>
+			<tbody>
+                {{#each products}}
+				<tr>
+					<td><img src="{{image}}" alt="{{name}}" width="50"></td>
+					<td>{{name}}</td>
+                    <td>{{category}}</td>
+					<td>{{description}}</td>
+					<td>{{price}} VND</td>
+					<td><a href="#" class="btn btn-primary btn-sm">Sửa</a>
+            <a href="#" class="btn btn-danger btn-sm">Xoá</a></td>
+
+				</tr>
+                {{/each}}
+				
+			</tbody>
+		</table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,148 @@
+<%- include('../include/header.ejs') %>
+
+    <div class="container">
+        <div class="text-center fs-2">Danh sách tài khoản</div>
+        <!-- Thêm/Search -->
+        <div class="mt-4 d-flex justify-content-between">
+            <a class="btn btn-primary col-md-2" href="../settings/register">+Add Account</a>
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Username"
+                        aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary px-3" type="button" id="button-addon2">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- table -->
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Sửa/Xóa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>NguyenChiThuan</td>
+                    <td>Thuan@gmail.com</td>
+                    <td>Thuan1234</td>
+                    <td>092134123</td>
+                    <td>User</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-user-pen text-primary"></i></a>
+                        <a href=""><i class="fa-solid fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>NguyenMinhPhuong</td>
+                    <td>Phuong@gmail.com</td>
+                    <td>MinhPhng2003</td>
+                    <td>093467123</td>
+                    <td>Adim</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-user-pen text-primary"></i></a>
+                        <a href=""><i class="fa-solid fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>NguyenThiNgan</td>
+                    <td>Nguyenngan@gmail.com</td>
+                    <td>Nguyenngan22a1</td>
+                    <td>0921341234</td>
+                    <td>User</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-user-pen text-primary"></i></a>
+                        <a href=""><i class="fa-solid fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>NguyenVanHai</td>
+                    <td>Hai@gmail.com</td>
+                    <td>Hai1234</td>
+                    <td>0387123473</td>
+                    <td>User</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-user-pen text-primary"></i></a>
+                        <a href=""><i class="fa-solid fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>GiangHoangDanh</td>
+                    <td>HoangDanh@gmail.com</td>
+                    <td>Danh2001</td>
+                    <td>092134124</td>
+                    <td>Adim</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-user-pen text-primary"></i></a>
+                        <a href=""><i class="fa-solid fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>NguyenXuanHuy</td>
+                    <td>Xuanhuy@gmail.com</td>
+                    <td>Huyxuan</td>
+                    <td>036134234</td>
+                    <td>Adim</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-user-pen text-primary"></i></a>
+                        <a href=""><i class="fa-solid fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>NguyenVanLong1234</td>
+                    <td>Nguyenlong@gmail.com</td>
+                    <td>Long1234</td>
+                    <td>0923341234</td>
+                    <td>User</td>
+                    <td>
+                        <a href=""><i class="fa-solid fa-user-pen text-primary"></i></a>
+                        <a href=""><i class="fa-solid fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">...</th>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--  -->
+        <div class="d-flex justify-content-between">
+            <h3>8/100</h3>
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <span class="page-link">Back</span>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item" aria-current="page">
+                        <span class="page-link">2</span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <%- include('../include/footer.ejs') %>
