@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add user</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <section class=" text-center text-lg-start">
+    <style>
+      .rounded-t-5 {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+      }
+
+      @media (min-width: 992px) {
+        .rounded-tr-lg-0 {
+          border-top-right-radius: 0;
+        }
+
+        .rounded-bl-lg-5 {
+          border-bottom-left-radius: 0.5rem;
+        }
+      }
+    </style>
+    <div class="card mb-3">
+      <div class="row g-0 d-flex align-items-center">
+        <div class="col-lg-4 d-none d-lg-flex">
+          <img src="https://img.freepik.com/free-vector/group-people-illustration-set_52683-33806.jpg?w=360" alt="Trendy Pants and Shoes"
+            class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+        </div>
+        <div class="col-lg-8">
+          <div class="card-body py-5 px-md-5">
+            <h1>Thêm sinh viên</h1>
+            <form action="/themNguoiDung" method="post">
+
+              <div class="form-outline mb-4">
+                <input name="ten" type="text" id="form2Example1" class="form-control" placeholder="Họ và tên" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <input name="tuoi" type="text" id="form2Example1" class="form-control" placeholder="Tuổi" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <input name="diaChi" type="text" id="form2Example2" class="form-control" placeholder="Địa chỉ" />
+              </div>
+
+
+              
+              <input type="submit" value="Thêm người dùng" class="btn btn-primary btn-block mb-4" />
+
+              
+          </div>
+
+
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</body>
+
+</html>

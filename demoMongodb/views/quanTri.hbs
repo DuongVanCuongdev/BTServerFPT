@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<script>
+  const users = [
+    {
+      avatar: "https://i.pravatar.cc/50?img=1",
+      name: "John Doe",
+      email: "john.doe@example.com",
+      phone: "555-555-5555"
+    },
+    {
+      avatar: "https://i.pravatar.cc/50?img=2",
+      name: "Jane Smith",
+      email: "jane.smith@example.com",
+      phone: "555-555-5555"
+    },
+    {
+      avatar: "https://i.pravatar.cc/50?img=3",
+      name: "Bob Johnson",
+      email: "bob.johnson@example.com",
+      phone: "555-555-5555"
+    },
+    {
+      avatar: "https://i.pravatar.cc/50?img=4",
+      name: "Alice Williams",
+      email: "alice.williams@example.com",
+      phone: "555-555-5555"
+    }
+  ];
+</script>
+<body>
+  <div class="container">
+    <h1 class="text-center my-5">Danh sách sinh viên</h1>
+    <a href="/">Thêm sinh viên mới</a>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Họ và tên</th>
+          <th>Tuổi</th>
+          <th>Địa chỉ</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each sinhviens}}
+        <tr>
+					<td>{{ten}}</td>
+                    <td>{{tuoi}}</td>
+					<td>{{diachi}}</td>
+					
+				</tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+
+    
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+</body>
+</html>

@@ -8,6 +8,7 @@ const path = require('path');
 const fs = require('fs');
 
 
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -25,6 +26,10 @@ app.set('views', './views');
 var appRouter = require('./router/appRouter');
 
 app.use(appRouter)
+
+
+
+
 
 app.listen(port, () => {
   console.log(`Localhost dang chay cong: ${port}`)

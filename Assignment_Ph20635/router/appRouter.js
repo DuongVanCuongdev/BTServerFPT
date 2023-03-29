@@ -73,16 +73,18 @@ var storage = multer.diskStorage({
     const password = req.body.matKhau
   
     if(!email == "" && !password == "") {
-      for(let i = 0; i <= users.length; i++) {
-        if(email == users[i].email && password == users[i].password) {
-          res.redirect('quantri')
-          return
-        } else {
-          res.render("Sai")
+      if(users.length == 0){
+        res.send("Ban chua co tai khoan");
+      } else {
+        for(let i = 0; i <= users.length; i++) {
+          if(email == users[i].email && password == users[i].password) {
+            res.redirect('quantri')
+          } 
         }
       }
+      
     } else {
-      console.log("Rong");
+      res.send("Khong de rong");
     }
   });
 
