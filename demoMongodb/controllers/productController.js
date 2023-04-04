@@ -1,9 +1,5 @@
 const express = require("express");
 const app = express();
-// var router = express.Router();
-
-
-
 
 const mongoose = require("mongoose");
 
@@ -15,8 +11,6 @@ app.get("/addScreen", (req, res) => {
   res.render("themNguoiDung");
 });
 
-
-
 app.post("/add", async (req, res) => {
   await mongoose.connect(uri);
 
@@ -24,15 +18,19 @@ app.post("/add", async (req, res) => {
   const age = req.body.gia;
   const diaChi = req.body.soLuong;
 
-  const newSV = {
-    ten: ten,
-    tuoi: age,
-    diachi: diaChi,
-  };
+  if (ten == "" || age == "" || diaChi == "") {
+    res.send("Khong duoc bo trong");
+  } else {
+    const newSV = {
+      ten: ten,
+      tuoi: age,
+      diachi: diaChi,
+    };
 
-  let kq = await svModel.insertMany(newSV);
-  let sinhviens = await svModel.find().lean();
-  res.redirect("/");
+    let kq = await svModel.insertMany(newSV);
+    let sinhviens = await svModel.find().lean();
+    res.redirect("/");
+  }
 });
 
 app.get("/", async (req, res) => {
@@ -58,7 +56,6 @@ app.get("/delete/:id", async (req, res) => {
 });
 
 app.get("/updateScreen/:id", async (req, res) => {
-
   await svModel
     .findById(req.params.id)
     .then((product) => {
@@ -73,16 +70,23 @@ app.get("/updateScreen/:id", async (req, res) => {
 });
 
 app.post("/update/:id", async (req, res) => {
+  const ten = req.body.ten;
+  const gia = req.body.gia;
+  const soLuong = req.body.soLuong;
 
-  svModel
-    .findByIdAndUpdate({ _id: req.params.id }, req.body, { new: true })
-    .then(async (updateUser) => {
-      console.log("Updated user:", updateUser);
-      res.redirect("/");
-    })
-    .catch((err) => {
-      console.error("Error updating user:", err);
-    });
+  if (ten == "" || gia == "" || soLuong == "") {
+    res.send("Khong duoc bo trong");
+  } else {
+    svModel
+      .findByIdAndUpdate({ _id: req.params.id }, req.body, { new: true })
+      .then(async (updateUser) => {
+        console.log("Updated user:", updateUser);
+        res.redirect("/");
+      })
+      .catch((err) => {
+        console.error("Error updating user:", err);
+      });
+  }
 });
 
 module.exports = app;

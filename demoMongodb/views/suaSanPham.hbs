@@ -45,15 +45,15 @@
             <form action="/update/{{product._id}}" method="post">
 
               <div class="form-outline mb-4">
-                <input name="ten" type="text" id="form2Example1" class="form-control" placeholder="Tên Sản phẩm" value="{{product.ten}}" />
+                <input name="ten" type="text" id="form2Example1" class="form-control" placeholder="Tên Sản phẩm" value="{{product.ten}}" required/>
               </div>
 
               <div class="form-outline mb-4">
-                <input name="gia" type="number" id="form2Example2" class="form-control" placeholder="Số lượng" value="{{product.tuoi}}"/>
+                <input name="gia" type="number" id="form2Example2" class="form-control" placeholder="Số lượng" value="{{product.tuoi}}" required/>
               </div>
 
               <div class="form-outline mb-4">
-                <input name="soLuong" type="number" id="form2Example2" class="form-control" placeholder="Giá" value="{{product.diachi}}"/>
+                <input name="soLuong" type="number" id="form2Example2" class="form-control" placeholder="Giá" value="{{product.diachi}}" required/>
               </div>
 
 
