@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center my-5">Danh sách người dùng</h1>
+    <a href="/">Thêm sản người dùng mới</a>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+            <th>STT</th>
+          <th>Họ và tên</th>
+          <th>Image</th>
+          <th>email</th>
+          <th>Tuỳ chọn</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        {{#each users}}
+        
+        <tr>
+            
+					<td>{{sum @index 1}}</td>
+                    <td>{{username}}</td>
+                    <td><img src="../uploads/{{image}}" alt="{{username}}" width="100"></td>
+					<td>{{email}}</td>
+					<td><a href="/api/aaa" class="btn btn-primary btn-sm">Sửa</a>
+            <a href="/api/user/delete/{{_id}}" onclick='return confirm("Bạn muốn xoá người dùng?")' class="btn btn-danger btn-sm">Xoá</a></td>
+				</tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+
+    
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+</body>
+</html>

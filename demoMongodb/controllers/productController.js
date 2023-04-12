@@ -70,13 +70,9 @@ app.get("/updateScreen/:id", async (req, res) => {
 });
 
 app.post("/update/:id", async (req, res) => {
-  const ten = req.body.ten;
-  const gia = req.body.gia;
-  const soLuong = req.body.soLuong;
+  
 
-  if (ten == "" || gia == "" || soLuong == "") {
-    res.send("Khong duoc bo trong");
-  } else {
+ 
     svModel
       .findByIdAndUpdate({ _id: req.params.id }, req.body, { new: true })
       .then(async (updateUser) => {
@@ -86,7 +82,7 @@ app.post("/update/:id", async (req, res) => {
       .catch((err) => {
         console.error("Error updating user:", err);
       });
-  }
+  
 });
 
 module.exports = app;

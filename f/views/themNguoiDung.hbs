@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add product</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <section class=" text-center text-lg-start">
+    <style>
+      .rounded-t-5 {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+      }
+
+      @media (min-width: 992px) {
+        .rounded-tr-lg-0 {
+          border-top-right-radius: 0;
+        }
+
+        .rounded-bl-lg-5 {
+          border-bottom-left-radius: 0.5rem;
+        }
+      }
+    </style>
+    <div class="card mb-3">
+      <div class="row g-0 d-flex align-items-center">
+        <div class="col-lg-4 d-none d-lg-flex">
+          <img src="https://img.freepik.com/free-vector/group-people-illustration-set_52683-33806.jpg?w=2000" alt="Trendy Pants and Shoes"
+            class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+        </div>
+        <div class="col-lg-8">
+          <div class="card-body py-5 px-md-5">
+            <h1>Người dùng</h1>
+            <form action="/api/user/update/{{user._id}}" method="post" enctype="multipart/form-data">
+
+              <div class="form-outline mb-4">
+                <input name="fullName" type="text" id="form2Example1" class="form-control" placeholder="Họ và tên" value="{{user.username}}"/>
+              </div>
+
+              <div class="form-outline mb-4">
+                <input name="email" type="text" id="form2Example1" class="form-control" placeholder="email" value="{{user.email}}"/>
+              </div>
+
+
+              <div class="input-group form-group">
+                <input type="file" name="file" value="{{user.image}}"/>
+              </div>
+
+              <div class="input-group form-group">
+                <select name="permission" id="permission">
+                  <option value="admin">admin</option>
+                  <option value="user" >user</option>
+                  
+                </select>
+              </div>
+
+              <input type="submit" value="Lưu" class="btn btn-primary btn-block mb-4" />
+
+              
+          </div>
+
+
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</body>
+
+</html>
