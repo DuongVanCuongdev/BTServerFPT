@@ -1,0 +1,29 @@
+<div class="container">
+  <h2 class="text-center">DANH SÁCH SAN PHAM</h2>
+  <a href="/sanpham/add" class="btn btn-info add-new">Thêm san pham</a>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">STT</th>
+        <th scope="col">Anh SP</th>
+        <th scope="col">Ten SP</th>
+        <th scope="col">Size giay</th>
+        <th scope="col">Gia ban</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each sanPham}}
+      <tr>
+        <td class="col-md-1">{{sum @index 1}}</td>
+        <td class="col-md-3"><img src="../uploads/{{this.anhSP}}" width="50%" height="50%" /></td>
+        <td class="col-md-3">{{this.tenSP}}</td>
+        <td class="col-md-2">{{this.giaSP}}đ</td>
+        <td class="col-md-2">{{this.sizeGiay}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+</div>

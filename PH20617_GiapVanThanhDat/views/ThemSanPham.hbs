@@ -1,0 +1,47 @@
+<h3 class="text-center">{{viewTitle}}</h3>
+
+<form method="POST" action="/sanpham/add" enctype="multipart/form-data" autocomplete="off"
+  onsubmit="return(validate());" name = "myForm">
+  <input type="hidden" name="id" value="{{sanPham._id}}">
+  <div class="form-group">
+    <label for="exampleInputEmail1">TenSP: </label>
+    <input type="text" class="form-control" placeholder="Ten san pham" name="tenSP" value="{{sanPham.tenSP}}" required>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Size giay: </label>
+    <input type="number" class="form-control" placeholder="Size giay" name="sizeGiay" value="{{sanPham.sizeGiay}}"
+      required>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Gia ban: </label>
+    <input type="number" class="form-control" placeholder="Gia ban" name="giaSP" value="{{sanPham.giaSP}}" required>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Anh SP:</label>
+    <input type="file" class="form-control" id="anhSP" name="anhSP" value="{{sanPham.anhSP}}" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+  function validate() {
+
+    if (document.myForm.giaSP.value < 0) {
+      alert("ko dc nho hon 0!");
+      document.myForm.giaSP.focus();
+      return false;
+    }
+
+    if (document.myForm.sizeGiay.value < 0) {
+      alert("ko dc nho hon 0!");
+      document.myForm.sizeGiay.focus();
+      return false;
+    }
+    
+    return (true);
+  }
+</script>
